@@ -1,0 +1,62 @@
+# Student Management System
+
+A simple Laravel CRUD application to manage student data, including features for creating, reading, updating, and deleting student records. The application uses DataTables for displaying a paginated, sortable, and searchable list of students.
+
+## Features
+- Create, Read, Update, and Delete (CRUD) functionality for student records.
+- DataTables integration for enhanced data display with pagination, sorting, and search.
+- Proper validation and error handling.
+- Clean and intuitive user interface.
+
+## Requirements
+- PHP >= 7.3
+- Composer
+- Laravel >= 8.x
+- MySQL or any other supported database
+- Node.js and npm (for frontend assets)
+
+## Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/suyashkore/student-management
+cd student-management
+
+# Install Dependencies
+
+composer install
+
+
+# Set the database connection details in the .env file:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=student_management
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+
+#  Run Migrations
+
+
+php artisan migrate
+
+#  Serve the Application
+
+php artisan serve
+
+Visit http://127.0.0.1:8000/students in your browser to view the application.
+
+
+# Usage
+Create Student: Navigate to the "Add Student" page and fill out the form to create a new student record.
+View Students: The homepage displays a list of all students with pagination, sorting, and search functionality provided by DataTables.
+Edit Student: Click the "Edit" button next to a student record to update their information.
+Delete Student: Click the "Delete" button to remove a student record.
+# Code Structure
+Migration: Located in the database/migrations/ directory.
+Model: The Student model is located in the app/Models/ directory.
+Controllers: CRUD operations are handled in the app/Http/Controllers/StudentController.php.
+Views: Blade templates are located in the resources/views/students/ directory.
+Routes: Defined in the routes/web.php file.
